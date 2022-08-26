@@ -1,4 +1,4 @@
-def _menu_():
+def menu():
     print("WELCOME TO SDC SYSTEM BY CHRIS. \n")
     print("MENU")
     print("1. ENTER RECORDS")
@@ -6,15 +6,15 @@ def _menu_():
     print("3. DELETE RECORD")
     x=int(input(" "))
     if x==1:
-        _capture_()
+        capture()
     elif x==2:
-        _display_()
+        display()
     elif x==3:
-        _delete_()
+        delete()
     else:
         print("Wrong number, retry again. ")
 
-def _capture_():
+def capture():
     print("Enter the student(s) records \n")
     name=input("NAME: ")
     age=int(input("AGE: "))
@@ -24,8 +24,9 @@ def _capture_():
     university=input("UNIVERSITY: ")
     acyear=int(input("ACADEMIC YEAR: "))
     print("Thanks, the records were capture successfully.")
+    menu()
 
-def _display_():
+def display():
     print("Student(s) Records  From The System\n")
     print("NAME: ",name)
     print("AGE: ",age)
@@ -35,9 +36,9 @@ def _display_():
     print("UNIVERSITY: ",university)
     print("ACADEMIC YEAR: ",acyear)
     print("\n")
-_menu_()
+    menu()
 
-def _delete_():
+def delete():
     print("Enter the number to delete.")
-    
-_menu_()
+
+menu()
